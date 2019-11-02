@@ -1,22 +1,4 @@
 package com.crud.tasks.trello.client;
-/*
-import com.crud.tasks.domain.TrelloBoardDto;
-import com.crud.tasks.trello.config.TrelloConfig;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.web.client.RestTemplate;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.when;
-*/
 
 import com.crud.tasks.trello.config.TrelloConfig;
 import com.crud.tasks.domain.*;
@@ -25,7 +7,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-//import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.web.client.RestTemplate;
 
