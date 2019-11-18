@@ -1,6 +1,7 @@
 package com.crud.tasks.service;
 
 import com.crud.tasks.domain.Mail;
+import org.apache.commons.validator.routines.EmailValidator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -33,7 +34,9 @@ public class SimpleEmailServiceTest {
         mailMessage.setSubject(mail.getSubject());
         mailMessage.setText(mail.getMessage());
         mailMessage.setCc(mail.getToCC());
-        if (mail.getToCC() != null) {
+
+        EmailValidator validator = EmailValidator.getInstance();
+        if (validator.isValid(mail.getMailTo())) {
             mailMessage.setCc(mail.getToCC());
         }
 
