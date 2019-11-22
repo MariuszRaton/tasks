@@ -26,14 +26,10 @@ public class EmailScheduler {
     public void sendInformationEmail(){
 
         long size = taskRepository.count();
-        String taskNumberDiferentiator = " tasks";
-        if(size == 1) {
-            taskNumberDiferentiator = " task";
-        }
+        String taskNumberDiferentiator;
 
-        simpleEmailService.send(new Mail(
-                adminConfig.getAdminMail(),
-                SUBJECT,
-                "Currently in database you got " + size + taskNumberDiferentiator,"mariusz.raton@o2.pl"));
+        taskNumberDiferentiator = size == 1 ? " task" : "tasks";
+
+         simpleEmailService.send(new Mail(adminConfig.getAdminMail(), SUBJECT, "Currently in database you got " + size + taskNumberDiferentiator,"mariusz.raton@o2.pl"));
     }
 }
